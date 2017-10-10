@@ -21,7 +21,7 @@ open class DTButtonMenuController: UIViewController {
     /// Background color
     /// Background color of view controller when menu is displayed. 
     /// Default value if black.
-    public var backgroundColor = UIColor.black.withAlphaComponent(0.7) {
+    public var backgroundColor = UIColor.white.withAlphaComponent(0.7) {
         didSet {
             view.backgroundColor = backgroundColor
         }
