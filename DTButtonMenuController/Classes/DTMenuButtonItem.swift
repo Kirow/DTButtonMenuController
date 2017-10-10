@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public final class DTMenuButton: NSObject {
     public init(view: DTMenuItemView = DTMenuItemView(type: UIButtonType.custom), completionHandlerBlock: DTButtonItemHandlerBlock?) {
@@ -20,12 +21,12 @@ public final class DTMenuButton: NSObject {
     public var completionHandlerBlock: DTButtonItemHandlerBlock?
     
     /// View presenting for the item
-    public var view: UIView!
+    public var view: DTMenuItemView!
     
     /// Final position of item when displaying on menu controller. Public get only.
     var position: CGPoint = CGPoint.zero
     
-    func buttonTapped(_ button: UIButton) {
+    @objc func buttonTapped(_ button: UIButton) {
         completionHandlerBlock?(self)
     }
 }
